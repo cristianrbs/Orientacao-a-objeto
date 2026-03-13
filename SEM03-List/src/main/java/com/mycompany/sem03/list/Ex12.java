@@ -24,7 +24,7 @@ public class Ex12 {
        List<Musica> listaMusica;
        listaMusica = new ArrayList<Musica>();
        Scanner ler = new Scanner(System.in);
-      int opcao = 0;
+       int opcao = 0;
 
       do{
          opcao = imprimeMenu();
