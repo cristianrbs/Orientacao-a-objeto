@@ -30,12 +30,6 @@ public class Musica{
         this.preco = ler.nextDouble();
     
 }
-    public void imprimir(){
-        System.out.println("Titulo:"+ this.titulo);
-        System.out.println("Artista:"+ this.artista);
-        System.out.println("Duracao:"+ this.duracao);
-        System.out.println("Preco:" + this.preco);
-    }
     
     public void copiar(Musica outra){
         this.titulo = outra.getTitulo();
@@ -43,9 +37,12 @@ public class Musica{
         this.duracao = outra.getDuracao();
         this.preco = outra.getPreco();
     }
-    @Override
+
     public String toString(){
-        return "Musica (Titulo:  " + this.titulo + ", Artista: " + this.artista + ",  duracao: " + this.duracao + ", preco: " + this.preco + ")";
+        return "Musica (Titulo:  " + this.titulo 
+                + ", Artista: " + this.artista 
+                + ",  Duração: " + this.duracao 
+                + ", Preço: " + this.preco + ")";
     }
     
         public void tocarMusica(){

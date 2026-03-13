@@ -50,7 +50,7 @@ public class Ex12 {
                 for (Musica m1 : listaMusica) { 
                     if (title.equals(m1.getTitulo())) {
                         System.out.println("Musica encontrada");
-                        m1.imprimir();
+                        m1.toString();
                     }
                 }                
             } else if (opcao == 4) {              
@@ -60,7 +60,7 @@ public class Ex12 {
                 for (Musica m1 : listaMusica) {
                     if (artista.equals(m1.getArtista())) {
                         System.out.println("Artista encontrado");
-                        m1.imprimir();
+                        m1.toString();
                     }
                 }
             }
