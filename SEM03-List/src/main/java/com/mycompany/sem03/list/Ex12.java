@@ -1,6 +1,8 @@
 package com.mycompany.sem03.list;
 import java.util.Scanner;
 import Classes.Musica;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ex12 {
    public static int imprimeMenu(){
@@ -15,5 +17,11 @@ public class Ex12 {
        System.out.print("------------------------------");
        System.out.println("Escolha uma opcao:");
        return ler.nextInt();
+   }
+   
+   public static void main(String[] args){
+       List<Musica> listaMusica;
+       listaMusica = new ArrayList<Musica>();
+       Scanner ler = new Scanner(System.in);
    }
 }
