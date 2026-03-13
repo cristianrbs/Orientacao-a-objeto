@@ -14,8 +14,9 @@ public class Ex12 {
        System.out.print("1 - Adicionar Musica");
        System.out.print("2 - Remover Musica");
        System.out.print("3 - Pesquisar Muisica pelo titulo");
+       System.out.print("4 - Pesquisar Muisica pelo artista");
        System.out.print("------------------------------");
-       System.out.println("Escolha uma opcao:");
+       System.out.print("Escolha uma opcao:");
        return ler.nextInt();
    }
    
@@ -23,5 +24,50 @@ public class Ex12 {
        List<Musica> listaMusica;
        listaMusica = new ArrayList<Musica>();
        Scanner ler = new Scanner(System.in);
-   }
+      int opcao = 0;
+
+      do{
+         opcao = imprimeMenu();
+         if(opcao == 1){
+            Musica m1 = new Musica();
+             m1.preencher();
+                listaMusica.add(m1);
+            } 
+         else if (opcao == 2) {
+                System.out.print("Informe o titulo da Musica que deseja remover:");
+                String title = ler.nextLine();
+
+                for (Musica m1 : listaMusica) {
+                    if (title.equals(m1.getTitulo())) {
+                        System.out.println("Musica encontrada");
+                        listaMusica.remove(m1);
+                    }
+                }                
+            } else if (opcao == 3) {
+                System.out.print("Informe o titulo:");
+                String title = ler.nextLine();
+
+                for (Musica m1 : listaMusica) { 
+                    if (title.equals(m1.getTitulo())) {
+                        System.out.println("Musica encontrada");
+                        m1.imprimir();
+                    }
+                }                
+            } else if (opcao == 4) {              
+                System.out.println("Informe o astista:");
+                String artista = ler.nextLine();
+
+                for (Musica m1 : listaMusica) {
+                    if (artista.equals(m1.getArtista())) {
+                        System.out.println("Artista encontrado");
+                        m1.imprimir();
+                    }
+                }
+            }
+        } while (opcao != 0);
+    }
 }
+         
+      
+   
+
