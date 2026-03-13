@@ -18,18 +18,25 @@ public class Musica{
         
         Scanner ler = new Scanner(System.in);
         
-        System.out.println("Preencha os dados da música: ");
+        System.out.println("Preencha os dados da musica: ");
         
-        System.out.print("Digite o nome da música: ");
+        System.out.print("Digite o nome da musica: ");
         this.titulo = ler.next();
-        System.out.print("Digite o nome do artista da música: ");
+        System.out.print("Digite o nome do artista da musica: ");
         this.artista = ler.next();
-        System.out.print("Digite o tempo de duração: ");
+        System.out.print("Digite o tempo de duracao: ");
         this.duracao = ler.nextDouble();
-        System.out.print("Digite o valor da música: ");
+        System.out.print("Digite o valor da musica: ");
         this.preco = ler.nextDouble();
     
 }
+    public void imprimir(){
+        System.out.println("Titulo:"+ this.titulo);
+        System.out.println("Artista:"+ this.artista);
+        System.out.println("Duracao:"+ this.duracao);
+        System.out.println("Preco:" + this.preco);
+    }
+    
     public void copiar(Musica outra){
         this.titulo = outra.getTitulo();
         this.artista = outra.getArtista();
@@ -38,14 +45,14 @@ public class Musica{
     }
     @Override
     public String toString(){
-        return "Música (Titulo:  " + this.titulo + ", Artista: " + this.artista + ",  Duração: " + this.duracao + ", Preço: " + this.preco + ")";
+        return "Musica (Titulo:  " + this.titulo + ", Artista: " + this.artista + ",  duracao: " + this.duracao + ", preco: " + this.preco + ")";
     }
     
         public void tocarMusica(){
-            System.out.print("A música " + this.titulo + " está tocando!");
+            System.out.print("A musica " + this.titulo + " esta tocando!");
         }
         public void desligarMusica(){
-            System.out.print("O título " + this.titulo + " foi interrompido.");
+            System.out.print("O titulo " + this.titulo + " foi interrompido.");
         }
         
         public void setTitulo(String titulo){
@@ -75,5 +82,6 @@ public class Musica{
         public double getPreco(){
             return this.preco;
         }
+
         
 }
