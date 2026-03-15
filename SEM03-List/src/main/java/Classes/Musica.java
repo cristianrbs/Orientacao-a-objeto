@@ -79,7 +79,5 @@ public class Musica{
         }
         public double getPreco(){
             return this.preco;
-        }
-
-        
+        }     
 }
