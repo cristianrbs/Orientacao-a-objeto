@@ -30,11 +30,11 @@ public class Musica{
     
 }
     
-    public void copiar(Musica outra){
-        this.titulo = outra.getTitulo();
-        this.artista = outra.getArtista();
-        this.duracao = outra.getDuracao();
-        this.preco = outra.getPreco();
+    public void copiar(Musica outro){
+        this.titulo = outro.getTitulo();
+        this.artista = outro.getArtista();
+        this.duracao = outro.getDuracao();
+        this.preco = outro.getPreco();
     }
 
     @Override
@@ -42,7 +42,7 @@ public class Musica{
         return "Musica {Titulo:  " + this.titulo 
                 + ", Artista: " + this.artista 
                 + ",  Duração: " + this.duracao 
-                + ", Preço: " + this.preco + "}";
+                + ", Preco: " + this.preco + "}";
     }
     
         public void tocarMusica(){
