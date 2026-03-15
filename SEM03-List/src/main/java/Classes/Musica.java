@@ -38,6 +38,7 @@ public class Musica{
         this.preco = outra.getPreco();
     }
 
+    @Override
     public String toString(){
         return "Musica (Titulo:  " + this.titulo 
                 + ", Artista: " + this.artista 
