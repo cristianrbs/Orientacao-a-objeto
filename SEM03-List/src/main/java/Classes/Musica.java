@@ -40,10 +40,10 @@ public class Musica{
 
     @Override
     public String toString(){
-        return "Musica (Titulo:  " + this.titulo 
+        return "Musica {Titulo:  " + this.titulo 
                 + ", Artista: " + this.artista 
                 + ",  Duração: " + this.duracao 
-                + ", Preço: " + this.preco + ")";
+                + ", Preço: " + this.preco + "}";
     }
     
         public void tocarMusica(){
