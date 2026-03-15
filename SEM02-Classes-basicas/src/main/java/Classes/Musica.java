@@ -14,7 +14,6 @@ public class Musica{
         this.preco = 0.0;
     }
     public void preencher(){
-        
         Scanner ler = new Scanner(System.in);
         
         System.out.println("Preencha os dados da musica: ");
@@ -28,7 +27,7 @@ public class Musica{
         System.out.print("Digite o valor da musica: ");
         this.preco = ler.nextDouble();
     
-}
+    }
     
     public void copiar(Musica outro){
         this.titulo = outro.getTitulo();

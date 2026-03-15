@@ -7,12 +7,14 @@ public class Casa{
     private int num_quartos;
     private double preco;
     
-    public Casa(){
+    public Casa(String endereco, double area, int num_quartos, double preco){
         this.endereco = "";
         this.area = 0.00;
         this.num_quartos = 0;
         this.preco = 0.00;
     }
+
+
     
     public void preencher(){
         Scanner ler = new Scanner(System.in);
@@ -36,17 +38,22 @@ public class Casa{
                 + ", Preco: " + this.preco + "}";
     }
     
-    /*public double calcularPrecoPorM2(){
+    public double calcularPrecoPorM2(){
         double precoPorM2 = 0;
         
         precoPorM2 = this.area / this.preco;
         
         return precoPorM2;
-    }*/
+    }
     
-    /*public void exibirResumo(){
-        
-    }*/
+    public String exibirResumo() {
+      return "Casa {Endereco:  " + this.endereco 
+                + ", Area: " + this.area 
+                + ",  Numero de quartos: " + this.num_quartos
+                + ", Preco por m2: " + calcularPrecoPorM2()
+                + ", Preco: " + this.preco + "}";
+                
+    }
     
     //Setters
     public void setEndereco(String endereco){
