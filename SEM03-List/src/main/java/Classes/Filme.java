@@ -40,10 +40,10 @@ public class Filme{
    
     @Override
     public String toString(){
-        return "Filme (Titulo:  " + this.titulo 
+        return "Filme {Titulo:  " + this.titulo 
                 + ", Diretor: " + this.diretor 
                 + ",  Duração: " + this.duracao 
-                + ", Preço: " + this.preco + ")";
+                + ", Preço: " + this.preco + "}";
     }
             
         public void setTitulo(String titulo){
