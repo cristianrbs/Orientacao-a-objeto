@@ -7,6 +7,13 @@ public class Ativo {
     private double qtdAcoes;
     private double variacaoDiaria;
     
+    public Ativo(String nomeEmpresa, double precoAcao, double qtdAcoes, double variacaoDiaria){
+        this.nomeEmpresa = nomeEmpresa;
+        this.precoAcao = precoAcao;
+        this.qtdAcoes = qtdAcoes;
+        this.variacaoDiaria = variacaoDiaria;
+    }
+    
     public Ativo(){
         this.nomeEmpresa = "";
         this.precoAcao = 0.00;
@@ -35,6 +42,21 @@ public class Ativo {
                 + ", Preco da acao: " + this.precoAcao 
                 + ",  Quantidade de acoes: " + this.qtdAcoes 
                 + ", Variacao diaria: " + this.variacaoDiaria + "}";
+    }
+    
+     public double calcularPosicaoDoAtivo() {
+        double PosicaoDoAtivo = 0;
+        PosicaoDoAtivo = this.precoAcao * this.qtdAcoes;
+        return PosicaoDoAtivo;
+    }
+     
+    public String exibirResumo() {
+      return "Ativo {Nome da Empresa:  " + this.nomeEmpresa 
+                + ", Preco da acao: " + this.precoAcao 
+                + ",  Quantidade de acoes: " + this.qtdAcoes
+                + ", Preco por m2: " + calcularPosicaoDoAtivo()
+                + ", Variacao diaria: " + this.variacaoDiaria + "}";
+                
     }
     
     //Setters

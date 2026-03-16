@@ -8,13 +8,18 @@ public class Casa{
     private double preco;
     
     public Casa(String endereco, double area, int num_quartos, double preco){
+        this.endereco = endereco;
+        this.area = area;
+        this.num_quartos = num_quartos;
+        this.preco = preco;
+    }
+    
+    public Casa(){
         this.endereco = "";
         this.area = 0.00;
         this.num_quartos = 0;
         this.preco = 0.00;
     }
-
-
     
     public void preencher(){
         Scanner ler = new Scanner(System.in);
