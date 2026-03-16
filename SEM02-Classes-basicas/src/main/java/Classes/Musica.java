@@ -7,6 +7,13 @@ public class Musica{
     private double duracao;
     private double preco;
     
+    public Musica(String titulo, String artista, double duracao, double preco){
+        this.titulo = titulo;
+        this.artista = artista;
+        this.duracao = duracao;
+        this.preco = preco;
+    }
+    
     public Musica(){
         this.titulo = "";
         this.artista = "";
@@ -29,12 +36,7 @@ public class Musica{
     
     }
     
-    public void copiar(Musica outro){
-        this.titulo = outro.getTitulo();
-        this.artista = outro.getArtista();
-        this.duracao = outro.getDuracao();
-        this.preco = outro.getPreco();
-    }
+    
 
     @Override
     public String toString(){
@@ -78,4 +80,11 @@ public class Musica{
         public double getPreco(){
             return this.preco;
         }     
+
+    public void copiar(Musica outro){
+        this.titulo = outro.getTitulo();
+        this.artista = outro.getArtista();
+        this.duracao = outro.getDuracao();
+        this.preco = outro.getPreco();
+    }
 }
