@@ -10,7 +10,7 @@ public class Ex01 {
         fila.add("Rubens");
         fila.add("Oliveira");
         fila.add("Carmo");
-        fila.add("Bastião");
+        fila.add("Bastiao");
         
         while (!fila.isEmpty()) {
         String pessoa = fila.poll();
