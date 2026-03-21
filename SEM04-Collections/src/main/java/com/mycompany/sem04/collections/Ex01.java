@@ -1,3 +1,4 @@
+
 package com.mycompany.sem04.collections;
 import java.util.LinkedList;
 import java.util.Queue;
