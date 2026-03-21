@@ -5,7 +5,7 @@ import java.util.Map;
 public class Ex06 {
     public static void main (String[] srgs){
         Map<String, Integer> frutas = new HashMap<>();
-        String[] palavras = {"maça", "banana", "cereja", "maça", "banana", "maça"};
+        String[] palavras = {"maca", "banana", "cereja", "maca", "banana", "maca"};
         
         for(String p: palavras){
             Integer cont = frutas.getOrDefault(p, 0);
