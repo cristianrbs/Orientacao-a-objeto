@@ -18,7 +18,7 @@ public class GerenciadorDeReserva {
     
     public boolean calcelarReserva(String nomeReserva){
         for(Reserva r: reservas){
-            if(r.getNomeReserva().equals(nomeReserva)){
+            if(r.getNomeReserva().equalsIgnoreCase(nomeReserva)){
                 reservas.remove(r);
                 System.out.println("Reserva cancelada");
                 return true;
@@ -28,8 +28,11 @@ public class GerenciadorDeReserva {
     }
     
     public void listarReservas(){
+        if(reservas.isEmpty()){
+            System.out.println("Nenhuma reseva cadastrada");
+        }
         for(Reserva r: reservas){
-            r.fill();
+            System.out.println(r);
         }
     }
     
