@@ -22,17 +22,16 @@ public class Reserva {
     }
     
     public void fill() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner ler = new Scanner(System.in);
 
         System.out.print("Nome da reserva: ");
-        this.nomeReserva = scanner.nextLine();
+        this.nomeReserva = ler.nextLine();
 
         System.out.print("Número de pessoas: ");
-        this.numPessoas = scanner.nextInt();
-        scanner.nextLine(); 
+        this.numPessoas = ler.nextInt(); 
 
         System.out.print("Data e hora (dd/MM/yyyy HH:mm): ");
-        this.dataHora = scanner.nextLine();
+        this.dataHora = ler.nextLine();
     }
 
     @Override
