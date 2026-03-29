@@ -3,18 +3,18 @@ import java.util.Scanner;
 import java.util.Objects;
 
 public class Produto {
-    private int codigoProduto;
+    private String codigoProduto;
     private String nomeProduto;
     private int quantidadeEmEstoque;
 
-    public Produto(int codigoProduto, String nomeProduto, int quantidadeEmEstoque) {
+    public Produto(String codigoProduto, String nomeProduto, int quantidadeEmEstoque) {
         this.codigoProduto = codigoProduto;
         this.nomeProduto = nomeProduto;
         this.quantidadeEmEstoque = quantidadeEmEstoque;
     }
     
     public Produto(){
-        this.codigoProduto = 0;
+        this.codigoProduto = "";
         this.nomeProduto = "";
         this.quantidadeEmEstoque = 0;
     }
@@ -23,7 +23,7 @@ public class Produto {
         Scanner ler  = new Scanner(System.in);
         
         System.out.print("Codigo do produto : ");
-        this.codigoProduto = ler.nextInt();
+        this.codigoProduto = ler.nextLine();
 
         System.out.print("Nome do produto: ");
         this.nomeProduto = ler.nextLine();
@@ -38,11 +38,11 @@ public class Produto {
     }
     
 
-    public int getCodigoProduto() {
+    public String getCodigoProduto() {
         return codigoProduto;
     }
 
-    public void setCodigoProduto(int codigoProduto) {
+    public void setCodigoProduto(String codigoProduto) {
         this.codigoProduto = codigoProduto;
     }
 
@@ -71,7 +71,7 @@ public class Produto {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 97 * hash + this.codigoProduto;
+        hash = 17 * hash + Objects.hashCode(this.codigoProduto);
         return hash;
     }
 
