@@ -39,12 +39,14 @@ public class Main {
                 novoProduto.setQuantidadeEmEstoque(quantidadeEmEstoque);
                 gerente.adicionarProduto(novoProduto);
 
-            } else if (opcao == 2) {
+            } 
+            else if (opcao == 2) {
                 System.out.print("Codigo do produto para remover: ");
                 String codigoProduto = ler.nextLine();
                 gerente.removerProduto(codigoProduto);
 
-            } else if (opcao == 3) {
+            } 
+            else if (opcao == 3) {
                 System.out.print("Codigo do produto: ");
                 String codigoProduto = ler.nextLine();
                 System.out.print("Nova quantidade: ");
@@ -52,23 +54,27 @@ public class Main {
                 ler.nextLine();
                 gerente.atualizarQuantidade(codigoProduto, novaQuantidade);
 
-            } else if (opcao == 4) {
+            } 
+            else if (opcao == 4) {
                 gerente.listarProdutos();
 
-            } else if (opcao == 5) {
+            } 
+            else if (opcao == 5) {
                 System.out.print("Codigo do produto a buscar: ");
                 String codigoProduto = ler.nextLine();
                 Produto encontrado = gerente.buscarProdutos(codigoProduto);
                 System.out.println(encontrado);
 
-            } else if (opcao == 0) {
+            } 
+            else if (opcao == 0) {
                 System.out.println("Encerrado o sistema");
 
-            } else {
+            } 
+            else {
                 System.out.println("Opcao invalida. Tente novamente.");
             }
 
-        } while (opcao != 0);
-
+        } 
+        while (opcao != 0);
     }
 }
