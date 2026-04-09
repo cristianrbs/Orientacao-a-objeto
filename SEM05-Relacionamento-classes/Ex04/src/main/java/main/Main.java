@@ -6,29 +6,29 @@ import java.util.Scanner;
 
 public class Main{
 
-    public static Time criarTime(Scanner leitor) {
+    public static Time criarTime(Scanner ler) {
         Time time = new Time();
 
         System.out.print("Nome do time: ");
-        time.setNome(leitor.nextLine());
+        time.setNome(ler.nextLine());
 
         System.out.print("Cidade: ");
-        time.setCidade(leitor.nextLine());
+        time.setCidade(ler.nextLine());
 
         System.out.print("Ano de fundação: ");
-        time.setAnoFundacao(leitor.nextInt());
-        leitor.nextLine();
+        time.setAnoFundacao(ler.nextInt());
+        ler.nextLine();
 
         Tecnico t = new Tecnico();
         System.out.print("Nome do técnico: ");
-        t.setNome(leitor.nextLine());
+        t.setNome(ler.nextLine());
 
         System.out.print("Nacionalidade do técnico: ");
-        t.setNacionalidade(leitor.nextLine());
+        t.setNacionalidade(ler.nextLine());
 
         System.out.print("Ano de nascimento do técnico: ");
-        t.setAnoNascimento(leitor.nextInt());
-        leitor.nextLine();
+        t.setAnoNascimento(ler.nextInt());
+        ler.nextLine();
 
         time.escalarTecnico(t);
         return time;
