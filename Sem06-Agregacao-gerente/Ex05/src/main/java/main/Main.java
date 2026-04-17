@@ -46,6 +46,7 @@ public class Main {
             if (p2.possuiCarroDeFabricante(c.getFabricante())) {
                 System.out.println(p1.getNome() + " e " + p2.getNome() +
                         " possuem carros do mesmo fabricante: " + c.getFabricante());
+                
             }
         }
     }
