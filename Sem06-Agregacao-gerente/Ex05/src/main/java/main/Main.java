@@ -41,6 +41,7 @@ public class Main {
 
         System.out.println("------------------------------");
         System.out.println("Fabricantes em comum");
+        
         for (Carro c : p1.getCarros()) {
             if (p2.possuiCarroDeFabricante(c.getFabricante())) {
                 System.out.println(p1.getNome() + " e " + p2.getNome() +
