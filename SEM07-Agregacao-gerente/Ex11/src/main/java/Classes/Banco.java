@@ -65,12 +65,22 @@ public class Banco {
     
     //metodo adicionar contas
     public void adicionar(Conta contaNova){
-        contas.add(contaNova);
+        if(contas.contains(contaNova)){
+            System.out.println("conta ja existe");
+        }
+        else{
+            contas.add(contaNova);
+        }
     }
     
     //metodo remover contas
     public void remover(Conta id){
-        contas.remove(id);
+        if(!contas.contains(id)){
+            System.out.println("Conta nao existe");
+        }
+        else{
+            contas.remove(id);
+        }
     }
     
     //metodo adicionar transacoes
